@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animation - Victor Jimenez</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/static/css/styles.css" />
+  <style>
+    /* Center the content */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    /* Container for the loading animation */
+    .loading-screen {
+      text-align: center;
+    }
+    /* Typewriter text animation */
+    .typewriter {
+      display: inline-block;
+      overflow: hidden; /* Ensures the text is hidden until typed */
+      border-right: 0.15em solid orange; /* Caret */
+      white-space: nowrap;
+      letter-spacing: 0.15em;
+      font-size: 1.5em;
+      animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+    }
+    /* Typing effect */
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    /* Blinking caret */
+    @keyframes blink-caret {
+      from, to { border-color: transparent; }
+      50% { border-color: orange; }
+    }
+    /* Fade-out animation for the whole loading screen */
+    .fade-out {
+      animation: fadeOut 1s forwards;
+    }
+    @keyframes fadeOut {
+      to { opacity: 0; visibility: hidden; }
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white">
+  <div class="loading-screen" id="loadingScreen">
+    <div class="typewriter">
+      Welcome to My Portfolio Website - Victor Jimenez. Loading...........................................................................
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener('load', () => {
+      // Wait for the typewriter animation to finish (3s) plus a short pause
+      setTimeout(() => {
+        // Add fade-out class to the loading screen
+        document.getElementById('loadingScreen').classList.add('fade-out');
+      }, 3200); // 3.2 seconds
+
+      // Redirect to the home page after the fade-out completes
+      setTimeout(() => {
+        window.location.href = "/home";
+      }, 4200); // 4.2 seconds
+    });
+  </script>
+</body>
+</html>

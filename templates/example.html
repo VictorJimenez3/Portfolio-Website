@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caribbean Tropical Vibes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Base styling */
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #e0f7fa; /* Soft pastel turquoise */
+      color: #004d40; /* Dark teal */
+    }
+    /* Headings with a tropical flair */
+    h1, h2, h3 {
+      font-family: 'Pacifico', cursive;
+    }
+    /* Navbar styling */
+    nav {
+      background: #b2ebf2; /* Lighter teal */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .nav-link:hover {
+      color: #ff8a80; /* Pastel coral on hover */
+    }
+    /* Tropical cards for content sections */
+    .tropical-card {
+      background: #ffffffcc; /* Semi-transparent white */
+      border: 2px solid #ffccbc; /* Pastel coral border */
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+    .tropical-card:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+  <!-- Navigation -->
+  <nav class="p-5 flex justify-between items-center">
+    <h1 class="text-3xl">Tropical Breeze</h1>
+    <div>
+      <a href="#" class="nav-link mx-3 text-lg">Home</a>
+      <a href="#" class="nav-link mx-3 text-lg">Gallery</a>
+      <a href="#" class="nav-link mx-3 text-lg">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="text-center py-10">
+    <h2 class="text-5xl mb-3">Welcome to the Tropics</h2>
+    <p class="text-xl">Experience the calm and vibrant essence of a faded Caribbean paradise.</p>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-4xl mx-auto px-6">
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="tropical-card">
+        <h3 class="text-3xl mb-2">Sun-Kissed Beaches</h3>
+        <p>Feel the gentle caress of the ocean breeze and the warmth of the tropical sun on soft sands.</p>
+      </div>
+      <div class="tropical-card">
+        <h3 class="text-3xl mb-2">Exotic Flavors</h3>
+        <p>Savor the unique tastes of Caribbean cuisine, from fresh seafood to spicy tropical fruits.</p>
+      </div>
+      <div class="tropical-card">
+        <h3 class="text-3xl mb-2">Vibrant Culture</h3>
+        <p>Immerse yourself in the lively music, art, and traditions that define the Caribbean spirit.</p>
+      </div>
+      <div class="tropical-card">
+        <h3 class="text-3xl mb-2">Serene Escapes</h3>
+        <p>Discover tranquil spots perfect for unwinding and reconnecting with nature.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 mt-10 bg-[#b2ebf2]">
+    <p class="text-lg">&copy; 2025 Caribbean Vibes. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

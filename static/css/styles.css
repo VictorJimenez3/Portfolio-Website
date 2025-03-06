@@ -1,0 +1,214 @@
+/* CSS Variables for easier color management */
+:root {
+    --color-background: #111827;
+    --color-text: #ffffff;
+    --color-navbar-bg: #1f2937;
+    --color-navbar-link: #ffffff;
+    --color-navbar-link-hover: #60a5fa;
+    --color-project-card-bg: #1f2937;
+    --color-project-card-border: #374151;
+    --color-project-card-hover-border: #60a5fa;
+    --color-button-bg: #2563eb;
+    --color-button-text: #ffffff;
+    --color-button-hover-bg: #1e40af;
+    --color-form-bg: #1f2937;
+    --color-input-bg: #374151;
+    --color-input-border: #475569;
+    --color-input-text: #ffffff;
+    --color-input-focus-border: #60a5fa;
+    --color-modal-overlay: rgba(0, 0, 0, 0.8);
+    --color-modal-content-bg: #1f2937;
+    --color-scrollbar-track: #1f2937;
+    --color-scrollbar-thumb: #4b5563;
+    --color-scrollbar-thumb-hover: #6b7280;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Verdana';
+    background-color: var(--color-background);
+    color: var(--color-text);
+    overflow: hidden;
+}
+
+/* Navbar */
+nav {
+    background-color: var(--color-navbar-bg);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: var(--color-navbar-link);
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--color-navbar-link-hover);
+}
+
+/* Section Titles */
+h1, h2 {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 1.5rem;
+}
+
+/* Project Cards */
+.project-card {
+    background-color: var(--color-project-card-bg);
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    border: 1px solid var(--color-project-card-border);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-project-card-hover-border);
+}
+
+/* Buttons */
+button {
+    background-color: var(--color-button-bg);
+    color: var(--color-button-text);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--color-button-hover-bg);
+}
+
+/* Contact Form */
+form {
+    background-color: var(--color-form-bg);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    background-color: var(--color-input-bg);
+    border: 1px solid var(--color-input-border);
+    border-radius: 5px;
+    color: var(--color-input-text);
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--color-input-focus-border);
+}
+
+/* Lightbox Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-modal-overlay);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.modal-content {
+    background-color: var(--color-modal-content-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+}
+
+.modal img {
+    max-width: 100px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+/* Loading Animation */
+.loading-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: opacity 1s ease-out;
+}
+
+.loading-screen.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loading-text {
+    font-size: 2rem;
+    border-right: 2px solid var(--color-text);
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--color-text) }
+}
+
+.content {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.content.visible {
+    display: block;
+    opacity: 1;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-scrollbar-thumb);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-scrollbar-thumb-hover);
+}
+
+/* Ensure the main container expands properly */
+html, body {
+    height: 100%;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}

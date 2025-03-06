@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Victor Jimenez</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body class="bg-gray-900 text-white overflow-y-auto h-screen">
+
+    <!-- Navbar -->
+    <nav class="bg-gray-800 p-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Victor Jimenez</h1>
+            <div class="hidden md:flex space-x-6">
+                <a href="/home" class="hover:text-gray-400">Home</a>
+                <a href="/projects" class="hover:text-gray-400">Projects</a>
+                <a href="/contact" class="hover:text-gray-400">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="text-center mt-10">
+        <h1 class="text-4xl font-bold">Projects</h1>
+        <p class="text-gray-400 mt-2">Showcasing my hackathon wins, open-source work, and personal projects.</p>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="max-w-6xl mx-auto mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
+        <!-- Project 1 -->
+        <div class="project-card bg-gray-800 p-4 rounded-lg border border-gray-700" data-category="hackathon">
+            <h2 class="text-xl font-bold">Project 1</h2>
+            <p class="text-gray-400 mt-2">Brief description of project 1.</p>
+            <button onclick="openModal('project1')" class="text-blue-400 mt-2 inline-block">View More →</button>
+        </div>
+        <!-- Project 2 -->
+        <div class="project-card bg-gray-800 p-4 rounded-lg border border-gray-700" data-category="hackathon">
+            <h2 class="text-xl font-bold">Project 2</h2>
+            <p class="text-gray-400 mt-2">Brief description of project 2.</p>
+            <button onclick="openModal('project2')" class="text-blue-400 mt-2 inline-block">View More →</button>
+        </div>
+        <!-- Project 3 -->
+        <div class="project-card bg-gray-800 p-4 rounded-lg border border-gray-700" data-category="hackathon">
+            <h2 class="text-xl font-bold">Project 3</h2>
+            <p class="text-gray-400 mt-2">Brief description of project 3.</p>
+            <button onclick="openModal('project3')" class="text-blue-400 mt-2 inline-block">View More →</button>
+        </div>
+        <!-- Project 4 -->
+        <div class="project-card bg-gray-800 p-4 rounded-lg border border-gray-700" data-category="hackathon">
+            <h2 class="text-xl font-bold">Project 4</h2>
+            <p class="text-gray-400 mt-2">Brief description of project 4.</p>
+            <button onclick="openModal('project4')" class="text-blue-400 mt-2 inline-block">View More →</button>
+        </div>
+        <!-- Project 5 -->
+        <div class="project-card bg-gray-800 p-4 rounded-lg border border-gray-700" data-category="hackathon">
+            <h2 class="text-xl font-bold">Project 5</h2>
+            <p class="text-gray-400 mt-2">Brief description of project 5.</p>
+            <button onclick="openModal('project5')" class="text-blue-400 mt-2 inline-block">View More →</button>
+        </div>
+        <!-- Project 6 -->
+        <div class="project-card bg-gray-800 p-4 rounded-lg border border-gray-700" data-category="hackathon">
+            <h2 class="text-xl font-bold">Project 6</h2>
+            <p class="text-gray-400 mt-2">Brief description of project 6.</p>
+            <button onclick="openModal('project6')" class="text-blue-400 mt-2 inline-block">View More →</button>
+        </div>
+    </div>
+
+    <!-- Modals for all projects -->
+    <div id="project1" class="modal fixed inset-0 bg-black bg-opacity-80 hidden flex items-center justify-center">
+        <div class="bg-gray-900 p-8 max-w-2xl w-full rounded-lg border border-gray-700 text-white flex flex-col items-center">
+            <h2 class="text-3xl font-bold">Project 1</h2>
+            <p class="mt-4 text-gray-300">Detailed information about Project 1.</p>
+            <button onclick="closeModal('project1')" class="mt-6 bg-red-600 px-4 py-2 rounded">Close</button>
+        </div>
+    </div>
+
+    <div id="project2" class="modal fixed inset-0 bg-black bg-opacity-80 hidden flex items-center justify-center">
+        <div class="bg-gray-900 p-8 max-w-2xl w-full rounded-lg border border-gray-700 text-white flex flex-col items-center">
+            <h2 class="text-3xl font-bold">Project 2</h2>
+            <p class="mt-4 text-gray-300">Detailed information about Project 2.</p>
+            <button onclick="closeModal('project2')" class="mt-6 bg-red-600 px-4 py-2 rounded">Close</button>
+        </div>
+    </div>
+
+    <div id="project3" class="modal fixed inset-0 bg-black bg-opacity-80 hidden flex items-center justify-center">
+        <div class="bg-gray-900 p-8 max-w-2xl w-full rounded-lg border border-gray-700 text-white flex flex-col items-center">
+            <h2 class="text-3xl font-bold">Project 3</h2>
+            <p class="mt-4 text-gray-300">Detailed information about Project 3.</p>
+            <button onclick="closeModal('project3')" class="mt-6 bg-red-600 px-4 py-2 rounded">Close</button>
+        </div>
+    </div>
+
+    <div id="project4" class="modal fixed inset-0 bg-black bg-opacity-80 hidden flex items-center justify-center">
+        <div class="bg-gray-900 p-8 max-w-2xl w-full rounded-lg border border-gray-700 text-white flex flex-col items-center">
+            <h2 class="text-3xl font-bold">Project 4</h2>
+            <p class="mt-4 text-gray-300">Detailed information about Project 4.</p>
+            <button onclick="closeModal('project4')" class="mt-6 bg-red-600 px-4 py-2 rounded">Close</button>
+        </div>
+    </div>
+
+<div id="project5" class="modal fixed inset-0 bg-black bg-opacity-80 hidden flex items-center justify-center">
+    <div class="bg-gray-900 p-8 max-w-2xl w-full rounded-lg border border-gray-700 text-white flex flex-col items-center">
+        <h2 class="text-3xl font-bold">Project 5</h2>
+        <p class="mt-4 text-gray-300">Detailed information about Project 5.</p>
+        <button onclick="closeModal('project5')" class="mt-6 bg-red-600 px-4 py-2 rounded">Close</button>
+    </div>
+</div>
+
+<div id="project6" class="modal fixed inset-0 bg-black bg-opacity-80 hidden flex items-center justify-center">
+    <div class="bg-gray-900 p-8 max-w-2xl w-full rounded-lg border border-gray-700 text-white flex flex-col items-center">
+        <h2 class="text-3xl font-bold">Project 6</h2>
+        <p class="mt-4 text-gray-300">Detailed information about Project 6.</p>
+        <button onclick="closeModal('project6')" class="mt-6 bg-red-600 px-4 py-2 rounded">Close</button>
+    </div>
+</div>
+
+    
+    <!-- JavaScript for Modal -->
+    <script>
+        function openModal(id) {
+            document.getElementById(id).classList.remove("hidden");
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).classList.add("hidden");
+        }
+    </script>
+
+</body>
+</html>
