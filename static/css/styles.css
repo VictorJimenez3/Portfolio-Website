@@ -110,6 +110,8 @@ input:focus, textarea:focus {
 }
 
 /* Lightbox Modal */
+/* Lightbox Modal */
+/* Lightbox Modal */
 .modal {
     position: fixed;
     top: 0;
@@ -120,17 +122,22 @@ input:focus, textarea:focus {
     display: flex;
     justify-content: center;
     align-items: center;
-    display: none;
+    overflow: auto; /* Allow scrolling */
+    padding: 2rem; /* Ensure spacing */
 }
 
+/* Make modal content scrollable if it overflows */
 .modal-content {
     background-color: var(--color-modal-content-bg);
     padding: 2rem;
     border-radius: 10px;
-    max-width: 500px;
-    text-align: center;
+    max-width: 90%; /* Responsive width */
+    max-height: 40vh; /* Prevent it from going off-screen */
+    overflow-y: auto; /* Enable scrolling inside modal */
+    text-align: left; /* Align text properly */
     position: relative;
 }
+
 
 .modal img {
     max-width: 100px;

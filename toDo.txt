@@ -1,0 +1,5 @@
+Create a better Front End Visual
+    Fix/Remove Hardcoded CSS for easier editing
+Add Contents of the Website
+Remove some temporary elements
+Refine coding structure

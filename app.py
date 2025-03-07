@@ -14,7 +14,11 @@ def home():
 @app.route('/example')
 def example():
     return render_template('example.html')
-
+'''
+@app.route('/test')
+def test():
+    return render_template('test.html')
+'''
 @app.route('/projects')
 def projects():
     return render_template("projects.html")
